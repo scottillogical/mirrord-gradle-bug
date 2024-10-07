@@ -1,0 +1,28 @@
+{
+    "target": {
+        "path": {
+            "deployment": "ultron"
+        },
+        "namespace": "scott1"
+    },
+    "agent": {
+        "namespace": "scott1"
+    },
+    "feature": {
+        "network": {
+            "incoming": "steal",
+            "outgoing": {
+                "filter":{
+                    "local": ["localhost:3000"]
+                }
+            }
+        },
+        "fs": "read",
+        "env": {
+            "override": {
+                "ULTRON__CHEETAH__ENVIRONMENT": "dev_local"
+            }
+        }
+    },
+    "kube_context": "zc-carsharing-dev"
+}
